@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>教育直播/直播课堂/直播平台搭建-268教育软件</title>
+        <meta name="keywords" content="教育直播，教育直播平台，网校直播，录播教育系统，直播教室，直播课堂，在线直播，直播软件，直播系统，直播源码，直播授课讲课，教学直播">
+	    <meta name="description" content="268教育软件-私有化专属在线教育直播平台，专注服务各类线下机构、传统教育行业，覆盖教育培训场景，量身打造在线软件平台，实现互联网转型。">
+        <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核 ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+        <!-- IOS6全屏 Chrome高版本全屏 ================================================== -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- 让360双核浏览器用webkit内核渲染页面 ================================================== -->
+        <meta name="renderer" content="webkit">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="width"/>
+        <!-- CSS ================================================== -->
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/public.css">
+        <link rel="stylesheet" href="./css/live.css">
+        <!-- Favicons ================================================== -->
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <script type="text/javascript" src="./js/public/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+        <div id="app" class="">
+            <div class="page-menu">
+                <div class="w1200 pagezoom">
+                    <img class="company-logo" src="/images/images-one/company-logo.png" alt="">
+                        <div class="menubox-parent">
+                            <span class="parent-li zindex">
+                                <a href="/?home"><span class="parent-li-txt">网校系统</span></a>
+                            </span>
+                            <span class="parent-li hover">
+                                <a href="live.html?live"><span class="parent-li-txt">教育直播</span></a>
+                                <div class="parent-bg"></div>
+                                <div class="menubox-children">
+                                    <div class="menubox">
+                                        <span :class="menuSec == '#home' ? 'hover' : ''" @click="goAnchor('#home')">首页</span>
+                                        <span :class="menuSec == '#chara' ? 'hover' : ''" @click="goAnchor('#chara')">直播特色</span>
+                                        <span :class="menuSec == '#func' ? 'hover' : ''" @click="goAnchor('#func')">直播功能</span>
+                                        <span :class="menuSec == '#super' ? 'hover' : ''" @click="goAnchor('#super')">技术优势</span>
+                                        <span :class="menuSec == '#case' ? 'hover' : ''" @click="goAnchor('#case')">客户案例</span>  
+                                    </div>
+                                </div>
+                            </span>
+                            <span class="parent-li">
+                                <a href="test.html?test"><span class="parent-li-txt">培训考试</span></a>
+                            </span>
+                            <span class="parent-li">
+                                <a href="educate.html?edu"><span class="parent-li-txt">教务管理</span></a>
+                            </span>
+                            <span class="parent-li">
+                                <a href="solution.html?solu"><span class="parent-li-txt">行业解决方案</span></a>
+                            </span>
+                            <span class="parent-li">
+                                <a href="product.html?prod"><span class="parent-li-txt">产品代理</span></a>
+                            </span>
+                        </div>
+                    <div class="ontrial-btn fsize16 c-fff" @click="openPopup">免费试用15天</div>
+                    <div class="company-tel fsize16 c-666"><img class="mr10" src="/images/images-one/company-tel.png" alt="">400-0620-268</div>
+                </div>
+            </div>
+            <div class="pagezoom">
+                <div class="empty-sec"></div>
+            </div>
+            <section id="home" class="netC-banner">
+                <div class="w1200 pagezoom pr">
+                    <div class="banner-txt">
+                        <div class="fl banner-txt-left">
+                            <h2 class="n_server-txt">零门槛搭建在线直播课堂</h2>
+                            <h3 class="n_server-title">专注在线教育、企业培训、视频会议等视频直播完整解决方案， 让您快速打造自己的直播平台</h3>
+                            <div class="n_server-form mt30">
+                                <input class="mobile" v-model="usertel" type="tel" maxlength="11" placeholder="输入您的手机号">
+                                <div class="n_server-form-btn" @click="submitForm(1)">免费体验</div>
+                            </div>
+                            <p><strong>或致电 400-0620-268</strong></p>
+                        </div>
+                    </div>
+                    <article class="banner_list pa">
+                        <ul class="clearfix">
+                            <li>
+                                <div class="banner-box">
+                                    <img class="banner-icon" src="./images/images-one/bIcon1-img.png"/>
+                                    <h2>多种直播应用场景</h2>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-box">
+                                    <img class="banner-icon" src="./images/images-one/bIcon2-img.png"/>
+                                    <h2>快速低成本搭建</h2>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-box">
+                                    <img class="banner-icon" src="./images/images-one/bIcon3-img.png"/>
+                                    <h2>丰富SDK/API接入</h2>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-box">
+                                    <img class="banner-icon" src="./images/images-one/bIcon4-img.png"/>
+                                    <h2>支持定制化服务</h2>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <div id="chara" class="pagezoom one-w100">
+                <div class="div-body w1200">
+                    <div class="section-box">
+                        <div class="one-title">
+                            <div class="section-tit-box">
+                                <div class="tit-sec-box">
+                                    <h2 class="mb15 c-333">一分钟拥有自己的直播教学平台</h2>
+                                    <p class="fsize16 c-999">强大的在线直播授课功能，满足各行业教育、培训的多样化需求</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-one-box">
+                    <ul>
+                        <li v-for="(item, index) in oneBoxList">
+                            <div class="w1200" :class="index%2 == 0 ? 'onebox-left' : 'onebox-right'">
+                                <img :src="item.image" alt="">
+                                <div class="onebox-sec">
+                                    <h2 class="title-box c-333 fsize20 mt20">{{item.title}}</h2>
+                                    <div class="label-box" v-for="(sitem, idx) in item.label">
+                                        <span v-if="idx == 0" class="red"></span>
+                                        <span v-if="idx == 1" class="yellow"></span>
+                                        <span v-if="idx == 2" class="green"></span>
+                                        <span v-if="idx == 3" class="blue"></span>
+                                        <p class="fsize18 c-999">{{sitem}}</p>
+                                    </div>
+                                    <div class="section-btn-box" style="margin: 60px 0 0;">
+                                        <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                                        <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用直播功能</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="func" class="pagezoom two-w100">
+                <div class="div-body w1200">
+                    <div class="section-box section-box-bottom section-two-sec">
+                        <div class="section-tit-box">
+                            <div class="tit-sec-box">
+                                <h2 class="mb15 c-333">丰富直播互动工具，适应不同场景和直播需求</h2>
+                                <p class="fsize16 c-999">全面支持直播和互动课堂模式，还原在线直播教学全部过程，提供完整的<br>直播数据，把控教学效果</p>
+                            </div>
+                        </div>
+                        <div class="section-two-box">
+                            <ul>
+                                <li v-for="(item, index) in twoBoxList" @click="menutwoList(index)">
+                                    <div class="two-imgbox">
+                                        <img class="img-one" :src="item.image" alt="">
+                                        <img class="img-two" :src="item.imagehover" alt="">
+                                    </div>
+                                    <h2 class="fsize20 c-333">{{item.title}}</h2>
+                                    <p class="fsize16 c-999">{{item.text}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-btn-box" style="margin: 50px auto 0;">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">点击获取产品试用</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="super" class="pagezoom">
+                <div class="div-body w1200">
+                    <div class="section-box section-box-bottom">
+                        <div class="section-tit-box">
+                            <div class="tit-sec-box">
+                                <h2 class="mb15 c-333">核心技术特点，持续挖掘在线直播潜在价值</h2>
+                                <p class="fsize16 c-999">教育直播自主研发多余项视频直播应用，让您专注于内容及业务，<br>低成本建设属于自己的直播云平台</p>
+                            </div>
+                        </div>
+                        <div class="section-thr-box">
+                            <ul>
+                                <li v-for="(item, index) in thrBoxList" class="mb40">
+                                    <img class="label-img" :src="item.image" alt="">
+                                    <h2 class="fsize20 c-333 mb15">{{item.title}}</h2>
+                                    <p class="fsize16 c-999">{{item.text}}</p>
+                                    <img @click="openKfPopup" class="arrow-icon" src="/images/images-one/thrSec-img/thr-arror-icon.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-btn-box" style="margin: 70px auto 0;">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">点击获取产品试用</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 底部 -->
+            <div id="case" class="footer pagezoom"></div>
+
+            <!--试用注册-->
+            <div :class="popupSec ? 'bg-shadow-show' : 'bg-shadow'">
+                <div :class="popupSec ? 'tryoutBox-show' : 'tryoutBox'">
+                    <a href="javascript:;" class="close-try" id="close-try" @click="closePopup"></a>
+                    <div class="left-text">
+                        <h2>注册成功您可以获得</h2>
+                        <p>1、网校全功能产品试用账号  </p>
+                        <p>2、金牌IT顾问1对1专属服务</p>
+                        <p>3、量身定制在线教育解决方案</p>
+                    </div>
+                    <div class="applyForm-box">
+                        <span class="tryLogo">在线开通 免费体验</span>
+                        <p>注册成功即可线上体验产品，创建专属网校，售卖录播课程 在线直播授课</p>
+                        <form name="applyForm" method="post" enctype="multipart/form-data">
+                            <section class="trial-ab-form">
+                                <ul>
+                                    <li>
+                                        <label>
+                                            <input class="userName" v-model="popusername" placeholder="请输入您的称呼" type="text" >
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input class="mobile" v-model="popusertel" type="tel" placeholder="请输入您的手机号（必填）" maxlength="11" type="text">
+                                        </label>
+                                    </li>
+                                </ul>
+                                <p>(您的信息仅用于268网校注册试用，将严格保密)</p>
+                                <div class="trialBtn">
+                                    <input type="button" id="subBtn" class="suBtn" value="开通免费试用账号"  @click="submitForm(2)">
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script type="text/babel" src="./js/public/browser.min.js"></script>
+        <script type="text/babel" src="./js/public/polyfill.min.js"></script>
+        <script src="./js/live.js"></script>
+        <script>
+            //百度咨询代码
+            (function() {
+                var _53code = document.createElement("script");
+                _53code.src = "https://tb.53kf.com/code/code/e49613946bf78d7197f3af52fac2e1986/3";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(_53code, s);
+            })();
+
+            //百度统计代码
+            var _hmt = _hmt || [];
+                (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?82e4e7ee710352006706ff97d0af3fa6";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+            $(".footer").load('footer.html');
+        </script>
+    </body>
+</html>

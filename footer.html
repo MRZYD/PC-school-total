@@ -1,0 +1,251 @@
+<div id="footer">
+    <!-- 底部 -->
+    <div class="case-w100">
+        <div class="section-box section-case-sec">
+            <div class="section-tit-box">
+                <span class="tit-icon-left"></span>
+                <div class="tit-sec-box">
+                    <h2 class="mb15 c-333">Startup、独角兽、行业巨头都在使用我们的服务</h2>
+                    <p class="fsize16 c-999">我们的客户分布在K12、语培、金融、司法、医学、工程、传媒艺术等各类领域其中包括<br>中国人民大学出版社、工信部人才培养、中国企业财务管理协会、新东方、文都考研、<br>广联达等业内知名机构和企业以及数以万计的大中小企业和机构</p>
+                </div>
+                <span class="tit-icon-right"></span>
+            </div>
+            <div class="section-case-box">
+                <img class="case-company" src="/images/images-one/company-pic.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="section-box" id="needs">
+        <div class="div-body w1200">
+            <div class="section-form-box">
+                <div class="form-sec-left">
+                    <div class="sec-left-label c-333">免费获取价值 <span>￥6899</span></div>
+                    <div class="sec-left-title mt40 c-fff"><i></i>定制化解决方案</div>
+                    <div class="sec-left-subtit fsize24 c-fff mt30">需求梳理+评估方案+资料报价</div>
+                    <ul>
+                        <li class="fsize16 c-fff mb5"><i></i>网校全功能产品试用账号</li>
+                        <li class="fsize16 c-fff mb5"><i></i>金牌IT顾问1V1专属服务</li>
+                        <li class="fsize16 c-fff mb5"><i></i>{{formText}}</li>
+                    </ul>
+                </div>
+                <div class="form-sec-right">
+                    <input class="userName sec-right-input mb20" v-model="username" placeholder="请输入您的称呼" type="text" >
+                    <input class="mobile sec-right-input mb20" v-model="usertel" type="tel" placeholder="请输入您的手机号（必填）" maxlength="11">
+                    <textarea class="mobileSmall sec-right-input textarea mb20" v-model="userneed" placeholder="请输入您的要求" cols="" rows="3"></textarea>
+                    <div class="sec-right-btn fsize20 c-fff" @click="submitForm(1)">免费领取测试账号和解决方案</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-w100">
+        <div class="div-body w1200">
+            <div class="footer-path">
+                <a href="/?home"><span class="fsize16 c-fff">网校系统</span></a>
+                <a href="/live.html?live"><span class="fsize16 c-fff">教育直播</span></a>
+                <a href="/test.html?test"><span class="fsize16 c-fff">培训考试</span></a>
+                <a href="/educate.html?edu"><span class="fsize16 c-fff">教务管理</span></a>
+                <a href="/solution.html?solu"><span class="fsize16 c-fff">行业解决方案</span></a>
+                <a href="/product.html?prod"><span class="fsize16 c-fff">产品代理</span></a>
+            </div>
+            <div class="footer-sec-box">
+                <div class="footer-sec-contact">
+                    <h2 class="fsize14 c-fff mb5">联系我们</h2>
+                    <span class="fsize14 c-fff mb5">联系电话：400-0620-268</span>
+                    <span class="fsize14 c-fff mb5">商务邮箱：shichang@268xue.com</span>
+                </div>
+                <img class="ewm-icon" src="/images/images-one/ewm-icon.png" alt="">
+                <div>
+                    <h2 class="fsize14 c-fff mb5">行业资讯</h2>
+                    <p class="fsize14 c-fff mb5">1.从【无法复制】的学而思看教育机构如何做大？</p>
+                    <p class="fsize14 c-fff mb5">2.用错位竞争打增量市场，流利说英语抓住了哪些关键点？</p>
+                    <p class="fsize14 c-fff mb5">3.揭秘教培行业中最值钱最神秘的岗位“学科运营”。</p>
+                </div>
+            </div>
+            <div class="copyright-text fsize14 c-fff">©2010-2020 北京易知路科技有限公司 版权所有 京公网安备11010802011695号 京ICP备13029607号</div>
+        </div>
+    </div>
+
+    <!-- 机器人 -->
+    <section class="consult_wrap">
+        <a href="javascript:;" class="dis robot-a" onclick="window.open('https://tb.53kf.com/code/stat/e49613946bf78d7197f3af52fac2e1986/3','newwindow', 'toolbar=no,scrollbars=yes,location=no,resizable=no,top=200,left=300,width=800,height=600')">
+            <span class="a-span fsize16">网校搭建在线咨询</span>
+            <div class="robot-head"></div>
+        </a>
+        <div class="consult_robot">
+            <a id="try-reg-robot" href="javascript:;" @click="openPopup">
+                <ul class="robot-sec">
+                    <li><p>行业成功案例</p></li>
+                    <li><p>获取解决方案</p></li>
+                    <li><p>查看报价资料</p></li>
+                    <li><p>免费试用15天</p></li>
+                </ul>
+                <div class="robet-tel-tit">全国咨询热线</div>
+                <div class="robot-tel">
+                    <img class="robot-tel-icon" src="/images/images-one/robot-tel-icon.png" alt="">
+                    <p class="robot-tel-text">400-0620-268</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!--试用注册-->
+    <div :class="popupSec ? 'bg-shadow-show' : 'bg-shadow'">
+        <div :class="popupSec ? 'tryoutBox-show' : 'tryoutBox'">
+            <a href="javascript:;" class="close-try" id="close-try" @click="closePopup"></a>
+            <div class="left-text">
+                <h2>注册成功您可以获得</h2>
+                <p>1、网校全功能产品试用账号  </p>
+                <p>2、金牌IT顾问1对1专属服务</p>
+                <p>3、量身定制在线教育解决方案</p>
+            </div>
+            <div class="applyForm-box">
+                <span class="tryLogo">在线开通 免费体验</span>
+                <p>注册成功即可线上体验产品，创建专属网校，售卖录播课程 在线直播授课</p>
+                <form name="applyForm" method="post" enctype="multipart/form-data">
+                    <section class="trial-ab-form">
+                        <ul>
+                            <li>
+                                <label>
+                                    <input class="userName" v-model="popusername" placeholder="请输入您的称呼" type="text" >
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input class="mobile" v-model="popusertel" type="tel" placeholder="请输入您的手机号（必填）" maxlength="11" type="text">
+                                </label>
+                            </li>
+                        </ul>
+                        <p>(您的信息仅用于268网校注册试用，将严格保密)</p>
+                        <div class="trialBtn">
+                            <input type="button" class="suBtn" value="开通免费试用账号"  @click="submitForm(2)">
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var footer = new Vue({
+    el: '#footer',
+    data(){
+        return{
+            popupSec: false,
+            username: '',
+            usertel: '',
+            userneed: '',
+            popusername: '',
+            popusertel: '',
+            menuSec: '#home',
+            formText: '量身定制在线网校解决方案',
+            sourcePath: ''  //来源路径
+        }
+    },
+    created() {
+        
+    },
+    mounted() {
+        let that = this;
+        this.localPath();
+    },
+    methods: {
+        localPath(){
+            let that = this;
+            let path = window.location.search;
+            console.log('path',path)
+            switch(path){
+                case '': case '?home' :
+                that.formText = '量身定制在线网校解决方案';
+                that.sourcePath = '推广页-网校系统';
+                break; 
+                case '?live' :
+                that.formText = '量身定制在线直播解决方案';
+                that.sourcePath = '推广页-教育直播';
+                break; 
+                case '?test' :
+                that.formText = '量身定制考试题库解决方案';
+                that.sourcePath = '推广页-培训考试';
+                break; 
+                case '?edu' :
+                that.formText = '量身定制教务管理解决方案';
+                that.sourcePath = '推广页-教务管理';
+                break; 
+                case '?solu' :
+                that.formText = '量身定制在线教育解决方案';
+                that.sourcePath = '推广页-行业解决方案';
+                break; 
+                default : 
+                that.formText = '量身定制在线网校解决方案';
+                that.sourcePath = '推广页-网校系统';
+            }
+        },
+
+        closePopup(){
+            let that = this;
+            that.popupSec = false;
+        },
+
+        openPopup(){
+            let that = this;
+            that.popupSec = true;
+        },
+
+        submitForm(num){
+            let that = this;
+            let username = that.username || that.popusername;
+            let mobile = that.usertel || that.popusertel; 
+            var pattern = /^1{1}[0-9]{10}$/;
+            if(mobile==""){
+                alert("请输入手机号!");
+                return;
+            } else {
+                if (!pattern.test(mobile)) {
+                    alert("请输入正确的手机号！");
+                    return;
+                }
+            }	
+            let requirement = '页面路径：' + window.location.href
+            + '；页面来源：' + (num == 1 ? (that.sourcePath + '-页面底部') : (that.sourcePath + '-机器人弹窗'))
+            + ((!that.userneed) ? '' : ('；备注需求：' + that.userneed)) 
+    
+            console.log(username);
+            console.log(mobile);
+            console.log(requirement)
+            $.ajax({
+                url : "http://tj.268xue.com/customer/apply!addApplyInfo.action",
+                data : {
+                    "user.userName":username,
+                    "user.mobile":mobile,
+                    "user.requirement":requirement
+                },
+                type : "post",
+                dataType : "json",
+                cache : false,
+                async : false,
+                success : function(result) {
+                    console.log(1);
+                    alert("提交成功！");
+                    $(".mobile,.userName,.mobileSmall").val("");
+                    that.username = ''; 
+                    that.popusername = '';
+                    that.usertel = '';
+                    that.popusertel = ''; 
+                    that.userneed = '';
+                },
+                error : function(error) {
+                    console.log(2);
+                    alert("提交成功！");
+                    $(".mobile,.userName,.mobileSmall").val("");
+                    that.username = ''; 
+                    that.popusername = '';
+                    that.usertel = '';
+                    that.popusertel = ''; 
+                    that.userneed = '';
+                }
+            });
+        
+        }
+
+    }
+})
+</script>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>教务管理/教务排课/培训学校管理系统-268教育软件</title>
+        <meta name="keywords" content="教务排课系统，教学管理软件，培训学校管理平台，培训机构软件，教育管理，教学管理，校区管理，面授课，呼叫中心，线下管理软件，教务管理解决方案">
+	    <meta name="description" content="268教育软件-私有化专属教务排课管理系统，专注服务各类线下机构、传统教育行业，覆盖教育培训场景，量身打造在线软件平台，实现互联网转型。">
+        <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核 ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+        <!-- IOS6全屏 Chrome高版本全屏 ================================================== -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- 让360双核浏览器用webkit内核渲染页面 ================================================== -->
+        <meta name="renderer" content="webkit">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="width"/>
+        <!-- CSS ================================================== -->
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/public.css">
+        <link rel="stylesheet" href="./css/educate.css">
+        <!-- Favicons ================================================== -->
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <script src="./js/public/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+        <div id="app" class="">
+            <div class="page-menu">
+                <div class="w1200 pagezoom">
+                    <img class="company-logo" src="/images/images-one/company-logo.png" alt="">
+                        <div class="menubox-parent">
+                            <span class="parent-li zindex">
+                                <a href="/?home"><span class="parent-li-txt">网校系统</span></a>
+                            </span>
+                            <span class="parent-li zindex">
+                                <a href="live.html?live"><span class="parent-li-txt">教育直播</span></a>
+                            </span>
+                            <span class="parent-li zindex">
+                                <a href="test.html?test"><span class="parent-li-txt">培训考试</span></a>
+                            </span>
+                            <span class="parent-li hover">
+                                <a href="educate.html?edu"><span class="parent-li-txt">教务管理</span></a>
+                                <div class="parent-bg"></div>
+                                <div class="menubox-children">
+                                    <div class="menubox">
+                                        <span :class="menuSec == '#home' ? 'hover' : ''" @click="goAnchor('#home')">首页</span>
+                                        <span :class="menuSec == '#chara' ? 'hover' : ''" @click="goAnchor('#chara')">产品优势</span>
+                                        <span :class="menuSec == '#func' ? 'hover' : ''" @click="goAnchor('#func')">产品功能</span>
+                                        <span :class="menuSec == '#case' ? 'hover' : ''" @click="goAnchor('#case')">客户案例</span>
+                                        <span :class="menuSec == '#needs' ? 'hover' : ''" @click="goAnchor('#needs')">需求评估</span> 
+                                    </div>
+                                </div>
+                            </span>
+                            <span class="parent-li">
+                                <a href="solution.html?solu"><span class="parent-li-txt">行业解决方案</span></a>
+                            </span>
+                            <span class="parent-li">
+                                <a href="product.html?prod"><span class="parent-li-txt">产品代理</span></a>
+                            </span>
+                        </div>
+                    <div class="ontrial-btn fsize16 c-fff" @click="openPopup">免费试用15天</div>
+                    <div class="company-tel fsize16 c-666"><img class="mr10" src="/images/images-one/company-tel.png" alt="">400-0620-268</div>
+                </div>
+            </div>
+            <div class="pagezoom">
+                <div class="empty-sec"></div>
+            </div>
+            <section id="home" class="netC-banner">
+                <div class="w1200 pagezoom pr">
+                    <div class="banner-txt">
+                        <div class="fl banner-txt-left">
+                            <h2 class="n_server-txt">轻简易用的教务管理系统</h2>
+                            <h3 class="n_server-title">满足多种业务场景  让学校管理更轻松</h3>
+                            <div class="n_server-form mt30">
+                                <input class="mobile" v-model="usertel" type="tel" maxlength="11" placeholder="输入您的手机号">
+                                <div class="n_server-form-btn" @click="submitForm(1)">免费体验</div>
+                            </div>
+                            <p><strong>或致电 400-0620-268</strong></p>
+                        </div>
+                    </div>
+                    <article class="banner_list pa">
+                        <ul class="clearfix">
+                            <li>
+                                <div class="banner-box">
+                                    <img class="banner-icon" src="./images/images-test/bIcon1-img.png"/>
+                                    <div class="fl pl10">
+                                        <h3>独立部署+SaaS租赁</h3>
+                                        <p class="fsize16 c-999 mt15">系统支持<span>多种部署形式</span>， 机构可以根据自身情况选 择合作模式</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-box">
+                                    <img class="banner-icon" src="./images/images-test/bIcon2-img.png"/>
+                                    <div class="fl pl10">
+                                        <h3>1V1量身定制开发</h3>    
+                                        <p class="fsize16 c-999 mt15">根据机构的<span>个性化需求</span>， 实现1V1量身定制开发</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-box">
+                                    <img class="banner-icon" src="./images/images-test/bIcon3-img.png"/>
+                                    <div class="fl pl10">
+                                        <h3>开放源码+二次开发</h3>
+                                        <p class="fsize16 c-999 mt15">系统<span>源码可打包</span>独立购买， 方便机构进行二次开发</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-box">
+                                    <img class="banner-icon" src="./images/images-test/bIcon4-img.png"/>
+                                    <div class="fl pl10">
+                                        <h3>多个终端自由切换</h3>
+                                        <p class="fsize16 c-999 mt15">支持微信，小程序，APP 电脑端多个<span>终端数据同步</span></p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <div id="chara" class="pagezoom one-w100">
+                <div class="div-body w1200">
+                    <div class="section-box">
+                        <div class="one-title">
+                            <div class="section-tit-box">
+                                <div class="tit-sec-box">
+                                    <h2 class="mb15 c-333">轻简易用，让教务管理更轻松</h2>
+                                    <p class="fsize16 c-999">只需要一台电脑或一部手机，你就可以在云端完成学校的日常管理，而其他问题由我们帮你搞定</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-one-box">
+                    <ul>
+                        <li v-for="(item, index) in oneBoxList">
+                            <div class="w1200" :class="index%2 == 0 ? 'onebox-left' : 'onebox-right'">
+                                <img class="one-sec-img" :src="item.image" alt="">
+                                <div class="onebox-sec">
+                                    <img class="sec-icon" :src="item.icon" alt="">
+                                    <h2 class="title-box c-333 fsize20 mt35 mb20">{{item.title}}</h2>
+                                    <div class="label-box">
+                                        <span v-if="index == 0" class="red"></span>
+                                        <span v-if="index == 1" class="yellow"></span>
+                                        <span v-if="index == 2" class="green"></span>
+                                        <p class="fsize18 c-999">{{item.text}}</p>
+                                    </div>
+                                    <div class="section-btn-box">
+                                        <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                                        <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用教务功能</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="func" class="pagezoom two-w100">
+                <div class="div-body w1200">
+                    <div class="section-box section-box-bottom">
+                        <div class="section-tit-box">
+                            <div class="tit-sec-box">
+                                <h2 class="mb15 c-333">实用教务运营工具，提升管理效率超50%</h2>
+                                <p class="fsize16 c-999">解决机构运营管理难题，优化盈利完善服务体系</p>
+                            </div>
+                        </div>
+                        <div class="section-two-box mt60">
+                            <ul>
+                                <li v-for="(item, index) in twoBoxList" class="mb15">
+                                    <div class="sec-boxitem">
+                                        <img class="label-bg mb15" :src="item.image" alt="">
+                                        <h2 class="fsize20 c-333 mb10"><strong>{{item.title}}</strong></h2>
+                                        <p class="fsize16 c-999">{{item.text}}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-btn-box" style="margin: 60px auto 0;">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用教务功能</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 底部 -->
+            <div class="footer pagezoom" id="case"></div>
+            <!--试用注册-->
+            <div :class="popupSec ? 'bg-shadow-show' : 'bg-shadow'">
+                <div :class="popupSec ? 'tryoutBox-show' : 'tryoutBox'">
+                    <a href="javascript:;" class="close-try" id="close-try" @click="closePopup"></a>
+                    <div class="left-text">
+                        <h2>注册成功您可以获得</h2>
+                        <p>1、网校全功能产品试用账号  </p>
+                        <p>2、金牌IT顾问1对1专属服务</p>
+                        <p>3、量身定制在线教育解决方案</p>
+                    </div>
+                    <div class="applyForm-box">
+                        <span class="tryLogo">在线开通 免费体验</span>
+                        <p>注册成功即可线上体验产品，创建专属网校，售卖录播课程 在线直播授课</p>
+                        <form name="applyForm" method="post" enctype="multipart/form-data">
+                            <section class="trial-ab-form">
+                                <ul>
+                                    <li>
+                                        <label>
+                                            <input class="userName" v-model="popusername" placeholder="请输入您的称呼" type="text" >
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input class="mobile" v-model="popusertel" type="tel" placeholder="请输入您的手机号（必填）" maxlength="11" type="text">
+                                        </label>
+                                    </li>
+                                </ul>
+                                <p>(您的信息仅用于268网校注册试用，将严格保密)</p>
+                                <div class="trialBtn">
+                                    <input type="button" id="subBtn" class="suBtn" value="开通免费试用账号"  @click="submitForm(2)">
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script type="text/babel" src="./js/public/browser.min.js"></script>
+        <script type="text/babel" src="./js/public/polyfill.min.js"></script>
+        <script src="./js/educate.js"></script>
+
+        <script>
+            //百度咨询代码
+            (function() {
+                var _53code = document.createElement("script");
+                _53code.src = "https://tb.53kf.com/code/code/e49613946bf78d7197f3af52fac2e1986/3";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(_53code, s);
+            })();
+
+            //百度统计代码
+            var _hmt = _hmt || [];
+                (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?82e4e7ee710352006706ff97d0af3fa6";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+            $(".footer").load('footer.html');
+        </script>
+        
+        
+    </body>
+</html>

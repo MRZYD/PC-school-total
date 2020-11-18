@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>在线教育平台/教学软件/网络系统-268教育软件</title>
+        <meta name="keywords" content="在线教育代理，在线教育软件代理，网校系统代理，教学平台代理，在线教育招商加盟，系统软件售卖，平台合作">
+	    <meta name="description" content="268教育软件-私有化专属在线教育平台系统，专注服务各类线下机构、传统教育行业，覆盖教育培训场景，量身打造在线软件平台，实现互联网转型。">
+        <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核 ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+        <!-- IOS6全屏 Chrome高版本全屏 ================================================== -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- 让360双核浏览器用webkit内核渲染页面 ================================================== -->
+        <meta name="renderer" content="webkit">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="width"/>
+        <!-- CSS ================================================== -->
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/public.css">
+        <link rel="stylesheet" href="./css/product.css">
+        <!-- Favicons ================================================== -->
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <script src="./js/public/jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+        <div id="app" class="">
+            <div class="page-menu">
+                <div class="w1200 pagezoom">
+                    <img class="company-logo" src="/images/images-one/company-logo.png" alt="">
+                        <div class="menubox-parent">
+                            <span class="parent-li zindex">
+                                <a href="/?home"><span class="parent-li-txt">网校系统</span></a>
+                            </span>
+                            <span class="parent-li zindex">
+                                <a href="live.html?live"><span class="parent-li-txt">教育直播</span></a>
+                            </span>
+                            <span class="parent-li zindex">
+                                <a href="test.html?test"><span class="parent-li-txt">培训考试</span></a>
+                            </span>
+                            <span class="parent-li zindex">
+                                <a href="educate.html?edu"><span class="parent-li-txt">教务管理</span></a>
+                            </span>
+                            <span class="parent-li zindex">
+                                <a href="solution.html?solu"><span class="parent-li-txt">行业解决方案</span></a>
+                            </span>
+                            <span class="parent-li hover">
+                                <a href="product.html?prod"><span class="parent-li-txt">产品代理</span></a>
+                            </span>
+                        </div>
+                    <div class="ontrial-btn fsize16 c-fff" @click="openPopup">免费试用15天</div>
+                    <div class="company-tel fsize16 c-666"><img class="mr10" src="/images/images-one/company-tel.png" alt="">400-0620-268</div>
+                </div>
+            </div>
+            <div class="pagezoom">
+                <div class="empty-sec"></div>
+            </div>
+            <section id="home" class="netC-banner">
+                <div class="w1200 pagezoom pr">
+                    <div class="banner-txt">
+                        <div class="banner-txt-left">
+                            <h2 class="n_server-txt"><strong>268合作伙伴，全国招募中</strong></h2>
+                            <h3 class="n_server-title fsize20">随着产品互联网的飞速发展，268将持续开放各项能力，<br>与各行业合作伙伴携手，助力企业数字化转型升级！</h3>
+                            <div class="c-fff fsize16 join-btn mt40" @click="openKfPopup">加入合作伙伴</div>
+                            <p>或致电 400-0620-268</p>
+                        </div>
+                        <div class="banner-txt-right">
+                            <h2 class="form-title c-333 mb40">合作申请</h2>
+                            <input class="userName sec-right-input mb20" v-model="username" placeholder="联系人" type="text" >
+                            <input class="mobile sec-right-input mb20" v-model="usertel" type="tel" placeholder="联系电话（必填）" maxlength="11" type="text">
+                            <textarea class="mobileSmall sec-right-input mb20" v-model="userneed" placeholder="需求简述" rows="2"></textarea>
+                            <div class="sec-right-btn fsize16 c-fff mt15" @click="submitForm(1)">立即申请</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div id="func" class="pagezoom one-w100">
+                <div class="div-body w1200">
+                    <div class="section-box">
+                        <div class="section-tit-box">
+                            <div class="tit-sec-box">
+                                <h2 class="mb20 c-333">合作条件</h2>
+                                <span class=""></span>
+                                <p class="c-999 mt20">Cooperative  terms</p>
+                            </div>
+                        </div>
+                        <div class="section-one-box mt40">
+                            <ul>
+                                <li v-for="(item, index) in oneBoxList" class="mb15">
+                                    <h2 class="fsize20 c-333 mb30"><strong>{{item.title}}</strong></h2>
+                                    <img class="label-bg mb15" :src="item.image" alt="">
+                                    <p class="fsize16 c-999">{{item.text}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="func" class="pagezoom two-w100">
+                <div class="div-body w1200">
+                    <div class="section-box section-box-bottom">
+                        <div class="section-tit-box">
+                            <div class="tit-sec-box">
+                                <h2 class="mb20 c-333">268合作伙伴申请流程</h2>
+                                <span class=""></span>
+                                <p class="c-999 mt20">Application  process</p>
+                            </div>
+                        </div>
+                        <div class="section-two-box mt40">
+                            <ul>
+                                <li v-for="(item, index) in twoBoxList">
+                                    <img class="label-num" :src="item.numicon" alt="">
+                                    <img class="label-bg" :src="item.image" alt="">
+                                    <h2 class="fsize18 c-333"><strong>{{item.title}}</strong></h2>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="apply-btn c-fff fsize18" @click="openPopup">立刻申请</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部 -->
+            <div class="footer-w100" style="margin:0;">
+                <div class="div-body w1200">
+                    <div class="footer-path">
+                        <a href="/?home"><span class="fsize16 c-fff">网校系统</span></a>
+                        <a href="/live.html?live"><span class="fsize16 c-fff">教育直播</span></a>
+                        <a href="/test.html?test"><span class="fsize16 c-fff">培训考试</span></a>
+                        <a href="/educate.html?edu"><span class="fsize16 c-fff">教务管理</span></a>
+                        <a href="/solution.html?solu"><span class="fsize16 c-fff">行业解决方案</span></a>
+                        <a href="/product.html?prod"><span class="fsize16 c-fff">产品代理</span></a>
+                    </div>
+                    <div class="footer-sec-box">
+                        <div class="footer-sec-contact">
+                            <h2 class="fsize14 c-fff mb5">联系我们</h2>
+                            <span class="fsize14 c-fff mb5">联系电话：400-0620-268</span>
+                            <span class="fsize14 c-fff mb5">商务邮箱：shichang@268xue.com</span>
+                        </div>
+                        <img class="ewm-icon" src="/images/images-one/ewm-icon.png" alt="">
+                        <div>
+                            <h2 class="fsize14 c-fff mb5">行业资讯</h2>
+                            <p class="fsize14 c-fff mb5">1.从【无法复制】的学而思看教育机构如何做大？</p>
+                            <p class="fsize14 c-fff mb5">2.用错位竞争打增量市场，流利说英语抓住了哪些关键点？</p>
+                            <p class="fsize14 c-fff mb5">3.揭秘教培行业中最值钱最神秘的岗位“学科运营”。</p>
+                        </div>
+                    </div>
+                    <div class="copyright-text fsize14 c-fff">©2010-2020 北京易知路科技有限公司 版权所有 京公网安备11010802011695号 京ICP备13029607号</div>
+                </div>
+            </div>
+      
+            <!-- 机器人 -->
+            <section class="consult_wrap">
+                <a href="javascript:;" class="dis robot-a" @click="openKfPopup">
+                    <span class="a-span fsize16">网校搭建在线咨询</span>
+                    <div class="robot-head"></div>
+                </a>
+                <div class="consult_robot">
+                    <a id="try-reg-robot" href="javascript:;" @click="openPopup">
+                        <ul class="robot-sec">
+                            <li><p>行业成功案例</p></li>
+                            <li><p>获取解决方案</p></li>
+                            <li><p>查看报价资料</p></li>
+                            <li><p>免费试用15天</p></li>
+                        </ul>
+                        <div class="robet-tel-tit">全国咨询热线</div>
+                        <div class="robot-tel">
+                            <img class="robot-tel-icon" src="/images/images-one/robot-tel-icon.png" alt="">
+                            <p class="robot-tel-text">400-0620-268</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <!--试用注册-->
+            <div :class="popupSec ? 'bg-shadow-show' : 'bg-shadow'">
+                <div :class="popupSec ? 'tryoutBox-show' : 'tryoutBox'">
+                    <a href="javascript:;" class="close-try" id="close-try" @click="closePopup"></a>
+                    <div class="left-text">
+                        <h2>注册成功您可以获得</h2>
+                        <p>1、网校全功能产品试用账号  </p>
+                        <p>2、金牌IT顾问1对1专属服务</p>
+                        <p>3、量身定制在线教育解决方案</p>
+                    </div>
+                    <div class="applyForm-box">
+                        <span class="tryLogo">在线开通 免费体验</span>
+                        <p>注册成功即可线上体验产品，创建专属网校，售卖录播课程 在线直播授课</p>
+                        <form name="applyForm" method="post" enctype="multipart/form-data">
+                            <section class="trial-ab-form">
+                                <ul>
+                                    <li>
+                                        <label>
+                                            <input class="userName" v-model="popusername" placeholder="请输入您的称呼" type="text" >
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input class="mobile" v-model="popusertel" type="tel" placeholder="请输入您的手机号（必填）" maxlength="11" type="text">
+                                        </label>
+                                    </li>
+                                </ul>
+                                <p>(您的信息仅用于268网校注册试用，将严格保密)</p>
+                                <div class="trialBtn">
+                                    <input type="button" id="subBtn" class="suBtn" value="开通免费试用账号"  @click="submitForm(2)">
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script type="text/babel" src="./js/public/browser.min.js"></script>
+        <script type="text/babel" src="./js/public/polyfill.min.js"></script>
+        <script src="./js/product.js"></script>
+
+        <script>
+            //百度咨询代码
+            (function() {
+                var _53code = document.createElement("script");
+                _53code.src = "https://tb.53kf.com/code/code/e49613946bf78d7197f3af52fac2e1986/3";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(_53code, s);
+            })();
+
+            //百度统计代码
+            var _hmt = _hmt || [];
+                (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?82e4e7ee710352006706ff97d0af3fa6";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+            $(".footer").load('footer.html');
+        </script>
+        
+        
+    </body>
+</html>

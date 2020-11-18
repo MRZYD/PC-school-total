@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>网校系统/直播教学/在线教育系统平台-268教育软件</title>
+        <meta name="keywords" content="搭建网校，网校系统软件，网校平台开源，网校定制开发，教育直播点播，教育教学软件，培训考试系统，线上授课教学，考试题库，教务管理，招生获客，在线打卡，在线作业">
+	    <meta name="description" content="268教育软件-私有化专属在线教育网校系统，专注服务各类线下机构、传统教育行业，覆盖教育培训场景，量身打造在线软件平台，实现互联网转型。">
+        <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核 ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+        <!-- IOS6全屏 Chrome高版本全屏 ================================================== -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- 让360双核浏览器用webkit内核渲染页面 ================================================== -->
+        <meta name="renderer" content="webkit">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="width"/>
+        <!-- CSS ================================================== -->
+        <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/public.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <!-- Favicons ================================================== -->
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div id="app" class="">
+            <div class="page-menu">
+                <div class="w1200 pagezoom">
+                    <img class="company-logo" src="/images/images-one/company-logo.png" alt="">
+                        <div class="menubox-parent">
+                            <span class="parent-li hover">
+                                <a href="/?home"><span class="parent-li-txt">网校系统</span></a>
+                                <div class="parent-bg"></div>
+                                <div class="menubox-children">
+                                    <div class="menubox">
+                                        <span :class="menuSec == '#home' ? 'hover' : ''" @click="goAnchor('#home')">首页</span>
+                                        <span :class="menuSec == '#student' ? 'hover' : ''" @click="goAnchor('#student')">招生获客</span>
+                                        <span :class="menuSec == '#live' ? 'hover' : ''" @click="goAnchor('#live')">直播教学</span>
+                                        <span :class="menuSec == '#test' ? 'hover' : ''" @click="goAnchor('#test')">考试题库</span>
+                                        <span :class="menuSec == '#service' ? 'hover' : ''" @click="goAnchor('#service')">服务流程</span>
+                                        <span :class="menuSec == '#case' ? 'hover' : ''" @click="goAnchor('#case')">成功案例</span>
+                                    </div>
+                                </div>
+                            </span>
+                            <span class="parent-li">
+                                <a href="live.html?live"><span class="parent-li-txt">教育直播</span></a>
+                            </span>
+                            <span class="parent-li">
+                                <a href="test.html?test"><span class="parent-li-txt">培训考试</span></a>
+                            </span>
+                            <span class="parent-li">
+                                <a href="educate.html?edu"><span class="parent-li-txt">教务管理</span></a>
+                            </span>
+                            <span class="parent-li">
+                                <a href="solution.html?solu"><span class="parent-li-txt">行业解决方案</span></a>
+                            </span>
+                            <span class="parent-li">
+                                <a href="product.html?prod"><span class="parent-li-txt">产品代理</span></a>
+                            </span>
+                        </div>
+                    <div class="ontrial-btn fsize16 c-fff" @click="openPopup">免费试用15天</div>
+                    <div class="company-tel fsize16 c-666"><img class="mr10" src="/images/images-one/company-tel.png" alt="">400-0620-268</div>
+                </div>
+            </div>
+            <div class="pagezoom">
+                <div class="empty-sec"></div>
+            </div>
+            <section id="home" class="netC-banner">
+                <div class="w1200 pagezoom pr">
+                    <div class="banner-txt">
+                        <div class="fl banner-txt-left">
+                            <h2 class="n_server-txt">私有化专属  在线直播/录播网校</h2>
+                            <h3 class="n_server-title">专注OMO教育模式 ·  1v1量身定制</h3>
+                            <p>服务各类线下机构，传统教育行业，覆盖各类教育培训场景，<br>量身打造在线软件平台，实现互联网转型。</p>
+                            <ul class="radio">
+                                <li>
+                                    <img src="/images/images-school/banner-list-img1.png" alt="">
+                                    <span class="fsize18">教育机构</span>
+                                </li>
+                                <li>
+                                    <img src="/images/images-school/banner-list-img2.png" alt="">
+                                    <span class="fsize18">学院学校</span>
+                                </li>
+                                <li>
+                                    <img src="/images/images-school/banner-list-img3.png" alt="">
+                                    <span class="fsize18">政府单位</span>
+                                </li>
+                                <li>
+                                    <img src="/images/images-school/banner-list-img4.png" alt="">
+                                    <span class="fsize18">企业培训</span>
+                                </li>
+                            </ul>
+                            <!-- <a id="try-reg" @click="openPopup" href="javascript:;" class="n-b-try">获取免费测试账号/在线教育解决方案 <div class="arrow-icon"></div></a> -->
+                        </div>
+                        <!-- <img class="banner-img-right" src="./images/images-school/banner-right-img.png" alt=""> -->
+                    </div>
+                    <article class="banner_list">
+                        <h2 class="fsize24 c-333">免费评估需求，获取解决方案及案例报价</h2>
+                        <h3  class="fsize20"><img src="/images/images-solution/one-sec-tel.png" alt=""> 400-0620-268</h3>
+                        <div class="form-sec mt30">
+                            <input class="fl ml40 fsize16 mobileSmall textarea"  v-model="userneed" placeholder="请简要描述您的需求">
+                            <input class="fl ml15 fsize16 userName" type="text" v-model="username" placeholder="请填写您的称呼">
+                            <input class="fl ml15 fsize16 mobile" v-model="usertel" type="tel" maxlength="11"  placeholder="请输入您的手机号（必填）">
+                            <div class="fl form-btm fsize16 c-fff ml15" @click="submitForm(1)">免费获取方案报价</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <div class="pagezoom w100">
+                <div class="div-body w1200">
+                    <div class="section-box">
+                        <div class="section-tit-box">
+                            <span class="tit-icon-left mr30"></span>
+                            <div class="tit-sec-box">
+                                <h2 class="mb15">私有化独立部署，用IT技术为教育信息化保驾护航</h2>
+                                <p class="fsize16 c-999">我们一直致力于更好的产品与服务，以更多的选择满足你业务的全面需求</p>
+                            </div>
+                            <span class="tit-icon-right ml30"></span>
+                        </div>
+                        <div class="section-zero-box">
+                            <ul>
+                                <li v-for="(item, index) in zeroBoxList">
+                                    <img :src="item.image" alt="">
+                                    <p class="title-box c-333 fsize20 mt20">{{item.title}}<span> · {{item.stitle}}</span></p>
+                                    <div class="label-box">
+                                        <p class="fsize16 c-999" v-for="(sitem, idx) in item.label">{{sitem}}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-btn-box">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">点击获取产品试用</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="one-w100 pagezoom">
+                <img class="left-bgimg pagezoom" src="/images/images-school/oneSec-img/one-left-bg-img.png">
+                <img class="right-bgimg pagezoom" src="/images/images-school/oneSec-img/one-right-bg-img.png">
+                <div class="div-body w1200">
+                    <div class="section-box section-box-bottom">
+                        <div class="section-tit-box">
+                            <span class="tit-icon-left mr30"></span>
+                            <div class="tit-sec-box">
+                                <h2 class="mb15">2000余项网校功能，在线教育一体化解决方案专家</h2>
+                                <p class="fsize16 c-999">11年在线教育产品研发经验，拥有自主研发的11大产品中心，37项产品应用，已经<br>为15000家多个领域的企业用户提供教育信息化服务</p>
+                            </div>
+                            <span class="tit-icon-right ml30"></span>
+                        </div>
+                        <!-- <div class="section-btn-blue" @click="openKfPopup">
+                            <span class="fsize16">获取详细功能列表</span>
+                            <img class="ml10" src="./images/images-school/arrow-right-icon.png " alt="">
+                        </div> -->
+                        <div class="section-one-box">
+                            <ul>
+                                <li v-for="(item, index) in oneBoxList">
+                                    <div class="li-one-head fsize20 c-fff">
+                                        {{item.title}}
+                                    </div>
+                                    <div class="li-one-sec mt30 fsize16 c-666">
+                                        <span v-for="(labeltext, index) in item.label"><img src="./images/images-school/oneSec-img/sec-one-dg.png" alt="">{{labeltext}}</span>
+                                    </div>
+                                    <!-- <div class="li-one-btn fsize14" @click="openKfPopup">咨询详情</div> -->
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="section-btn-box">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">点击获取产品试用</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="two-w100 pagezoom w1200">
+                <div class="section-box section-box-bottom">
+                    <div class="section-tit-box">
+                        <span class="tit-icon-left mr30"></span>
+                        <div class="tit-sec-box">
+                            <h2 class="mb15">独立网校构建教育机构品牌，覆盖多个流量生态</h2>
+                            <p class="fsize16 c-999">快速搭建独立网校平台，让教育机构品牌覆盖多个流量生态，沉淀自己的学员用<br>户，支持PC网页、微信H5、网校、APP、小程序等多种终端形式</p>
+                        </div>
+                        <span class="tit-icon-right ml30"></span>
+                    </div>
+                    <div class="section-two-box">
+                        <ul>
+                            <li v-for="(item, index) in twoBoxList">
+                                <div class="li-two-head">
+                                    <div :class="item.class"></div>
+                                </div>
+                                <div class="li-two-sec fsize20">{{item.title}}</div>
+                                <div class="li-two-text fsize16 c-999">{{item.text}}</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="section-btn-box">
+                        <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                        <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用多端网校</div>
+                    </div>
+                </div>
+            </div>
+            <div id="student" class="thr-w100 pagezoom">
+                <div class="div-body w1200">
+                    <div class="section-box section-box-bottom">
+                        <div class="section-tit-box">
+                            <span class="tit-icon-left mr30"></span>
+                            <div class="tit-sec-box">
+                                <h2 class="mb15">快速搭建线上招生获客渠道，构建私域流量池</h2>
+                                <p class="fsize16 c-999">多种营销裂变工具自由组合，可跨渠道、跨终端帮助机构完成招生引流全过程，<br>全过程数据追踪，提高招生转化率，让营销更简单、数据更有效。</p>
+                            </div>
+                            <span class="tit-icon-right ml30"></span>
+                        </div>
+                        <div class="section-thr-box">
+                            <ul>
+                                <li v-for="(item, index) in thrBoxList">
+                                    <div class="li-thr-head">
+                                        <div :class="item.class"></div>
+                                        <span class="fsize20">{{item.title}}</span>
+                                    </div>
+                                    <div class="li-thr-sec fsize16">{{item.text}}</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-btn-box">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用营销功能</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="live" class="four-w100 pagezoom">
+                <div class="div-body w1200">
+                    <div class="section-box">
+                        <div class="section-tit-box">
+                            <span class="tit-icon-left mr30"></span>
+                            <div class="tit-sec-box">
+                                <h2 class="mb15">满足各种在线教育直播场景，真实还原面授教学</h2>
+                                <p class="fsize16 c-999">支持实时视频直播、屏幕分享直播、分屏直播、直播回放，还原线下教学场景，师生互动零距离。</p>
+                            </div>
+                            <span class="tit-icon-right ml30"></span>
+                        </div>
+                        <div class="section-four-box">
+                            <ul class="menu-list">
+                                <li v-for="(item, index) in fourBoxList.menuList" @click="menuFourList(index)">
+                                    <div>
+                                        <img v-show="fourListIndex != index" :src="item.image" alt="">
+                                        <img v-show="fourListIndex == index" :src="item.imagehover" alt="">
+                                    </div>
+                                    <p class="fsize20" :class="fourListIndex == index ? 'blue' : 'c-999'">{{item.title}}</p>
+                                </li>
+                            </ul>
+                            <ul class="sec-list">
+                                <block v-for="(item, index) in fourBoxList.secList">
+                                    <li class="list-left" v-if="fourListIndex == index">
+                                        <img class="sec-img" :src="item.image" alt="">
+                                        <div class="sec-box">
+                                            <h2 class="fsize24 c-222 mb30">{{item.title}}</h2>
+                                            <h4 class="fsize18 c-666 mb15">{{item.subtitle}}</h4>
+                                            <p class="fsize16 c-999 mb40">{{item.text}}</p>
+                                            <div class="labelbox">
+                                                <div class="labellist" v-for="(labelitem, idx) in item.label">
+                                                    <img class="label-img" :src="labelitem.labelimage" alt="">
+                                                    <span class="label-text c-666 fsize16">{{labelitem.labeltitle}}</span>
+                                                </div>
+                                            </div>
+                                            <div class="section-btn-box" style="margin: 80px 0 0;">
+                                                <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                                                <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用直播功能</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </block>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="five-w100 pagezoom">
+                <div class="div-body w1200">
+                    <div class="section-box">
+                        <div class="section-tit-box">
+                            <span class="tit-icon-left mr30"></span>
+                            <div class="tit-sec-box">
+                                <h2 class="mb15">互动式录播教学，一站式视频点播真实还原线下课堂</h2>
+                                <p class="fsize16 c-999">清晰流畅的教学视频播放功能，提供专业的视频观看体验，满足移动端、PC端的<br>课程学习需求，掌握学员学习进度。</p>
+                            </div>
+                            <span class="tit-icon-right ml30"></span>
+                        </div>
+                        <div class="section-five-box">
+                            <ul>
+                                <li class="mb40" v-for="(item, index) in fifBoxList">
+                                    <img class="five-sec-img" :src="item.image" alt="">
+                                    <div class="five-sec-box">
+                                        <h2 class="fsize20 mt15 c-333">{{item.title}}</h2>
+                                        <p class="mt10 fsize14 c-999">{{item.text}}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-btn-box">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用录播功能</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-body pagezoom w1200">
+                <div class="section-box section-box-bottom">
+                    <div class="section-tit-box">
+                        <span class="tit-icon-left mr30"></span>
+                        <div class="tit-sec-box">
+                            <h2 class="mb15">多种趣味教学助学工具，灵活开展线上授课</h2>
+                            <p class="fsize16 c-999">多样化的教学助学工具，激励学员自发学习，提升完课率复购率</p>
+                        </div>
+                        <span class="tit-icon-right ml30"></span>
+                    </div>
+                    <div class="section-six-box">
+                        <ul>
+                            <li class="mb40" v-for="(item, index) in sixBoxList">
+                                <img class="six-sec-img" :src="item.image" alt="">
+                                <div class="six-sec-box">
+                                    <h2 class="fsize20 c-333 mt15">{{item.title}}</h2>
+                                    <p class="mt15 fsize16 c-999">{{item.text}}</p>
+                                </div>
+                                <span class="text-eng">{{item.texteng}}</span>
+                                <div class="icon-color"></div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="section-btn-box">
+                        <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                        <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用助学工具</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sev-w100 pagezoom" id="test">
+                <div class="div-body w1200">
+                    <div class="section-box">
+                        <div class="section-tit-box">
+                            <span class="tit-icon-left mr30"></span>
+                            <div class="tit-sec-box">
+                                <h2 class="mb15">考试题库功能多样化，满足多种业务场景</h2>
+                                <p class="fsize16 c-999">稳定安全的考试题库系统，自主研发纯B/S架构，针对机构/企业单位设计。满足多种<br>业务场景，随时随地搞定考试，有效降低人工成本，效率高N倍。</p>
+                            </div>
+                            <span class="tit-icon-right ml30"></span>
+                        </div>
+                        <div class="section-sev-box">
+                            <div class="section-sev-ul mb60">
+                                <div class="section-sev-li">
+                                    <h2 class="fsize20 c-333 mb15">01.多题型/批量导入</h2>
+                                    <p class="fsize16 c-999 mb5">支持单/多选、判断、填空、材料、综合题等</p>
+                                    <p class="fsize16 c-999 mb5">快速批量导入/可视化新增、批量修改试题 </p>
+                                </div>
+                                <div class="section-sev-li">
+                                    <h2 class="fsize20 c-333 mb15">02.多种练习模式+线上仿真考试</h2>
+                                    <p class="fsize16 c-999 mb5">支持考点练习、错题练习、自由组卷</p>
+                                    <p class="fsize16 c-999 mb5">设置试卷是否独立出售，作为独立商品售卖 </p>
+                                </div>
+                            </div>
+                            <div class="section-sev-img">
+                                <img src="/images/images-school/sev-sec-img.png" alt="">
+                            </div>
+                            <div class="section-sev-ul mb40 mt60">
+                                <div class="section-sev-li">
+                                    <h2 class="fsize20 c-333 mb15">03.多方式评分+能力评估</h2>
+                                    <p class="fsize16 c-999 mb5">支持自主自评，客观题、填空题自动阅卷</p>
+                                    <p class="fsize16 c-999 mb5">统计学员做题信息，根据考测生成能力透析报告 </p>
+                                </div>
+                                <div class="section-sev-li">
+                                    <h2 class="fsize20 c-333 mb15">04.错题收集+考试记录</h2>
+                                    <p class="fsize16 c-999 mb5">支持学员错题收藏，根据错题库针对性练习</p>
+                                    <p class="fsize16 c-999 mb5">支持查看试题解析，记录学员考试测评记录</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-btn-box">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用考试功能</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eig-w100 pagezoom">
+                <div class="div-body w1200">
+                    <div class="section-box section-box-bottom">
+                        <div class="section-tit-box">
+                            <span class="tit-icon-left mr30"></span>
+                            <div class="tit-sec-box">
+                                <h2 class="mb15">整合教育场景下多款应用工具，优化在线教学流程</h2>
+                                <p class="fsize16 c-999">利用教育场景下的实用教学工具，为教育行业提供更便捷的在线教学流程优<br>体验，提高转化效率，赋能在线教育闭环。</p>
+                            </div>
+                            <span class="tit-icon-right ml30"></span>
+                        </div>
+                        <div class="section-eig-box">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide" v-for="(item, index) in eigBoxList">
+                                    <img :src="item.image" alt="">
+                                    <h2 class="fsize20 c-222 mt30">{{item.title}}</h2>
+                                    <p class="fsize16 c-999 mt15">{{item.text}}</p>
+                                  </div>
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="section-btn-box">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用应用工具</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-body pagezoom w1200">
+                <div class="section-box section-box-bottom">
+                    <div class="section-tit-box">
+                        <span class="tit-icon-left mr30"></span>
+                        <div class="tit-sec-box">
+                            <h2 class="mb15">运用大数据挖掘算法，降低网校运营成本</h2>
+                            <p class="fsize16 c-999">强大的统计分析能力，记录用户在学习过程中的行为数据，多维度、多指标<br>的交叉分析，让管理者更好掌握运营数据。</p>
+                        </div>
+                        <span class="tit-icon-right ml30"></span>
+                    </div>
+                    <div class="section-nine-box">
+                        <img class="sec-nine-img" src="/images/images-school/nineSec-img/nine-sec-img.png" alt="">
+                        <ul>
+                            <li class="mb20" v-for="(item, index) in nineBoxList">
+                                <img class="nine-sec-img" :src="item.image" alt="">
+                                <div class="nine-sec-box ml30">
+                                    <h2 class="fsize20 c-333">{{item.title}}</h2>
+                                    <p class="mt10 fsize16 c-999">{{item.text}}</p>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="section-btn-box">
+                        <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询功能详情</div>
+                        <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用数据功能</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ten-w100 pagezoom" id="service">
+                <div class="div-body w1200">
+                    <div class="section-box">
+                        <div class="section-tit-box">
+                            <span class="tit-icon-left mr30"></span>
+                            <div class="tit-sec-box">
+                                <h2 class="mb15">售前售后白金服务，一站式闭环研发管理</h2>
+                                <p class="fsize16 c-999">提供互联网+项目全生命周期的管理与服务，我们一直致力于更好的产品与<br>服务，以更好的选择满足你业务的全面需求！</p>
+                            </div>
+                            <span class="tit-icon-right ml30"></span>
+                        </div>
+                        <div class="section-ten-box">
+                            <ul class="ten-box-ul1">
+                                <li v-for="(item, index) in tenBoxList.menuTop">
+                                    <img :src="item.image" alt="">
+                                    <span class="fsize18 c-333 mt5">{{item.text}}</span>
+                                </li>
+                            </ul>
+                            <img class="ten-time-img" src="/images/images-school/tenSec-img/ten-time-img.png" alt="">
+                            <ul class="ten-box-ul2">
+                                <li v-for="(item, index) in tenBoxList.menuBtm">
+                                    <span class="fsize18 c-333 mb5">{{item.text}}</span>
+                                    <img :src="item.image" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-btn-box">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询服务详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用网校产品</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ele-w100 pagezoom">
+                <div class="div-body w1200">
+                    <div class="section-box">
+                        <div class="section-tit-box">
+                            <span class="tit-icon-left mr30"></span>
+                            <div class="tit-sec-box">
+                                <h2 class="mb15">平台版本自由选择，满足不同机构的多样化需求</h2>
+                                <p class="fsize16 c-999">教育机构、学校、企业、事业单位，每个行业都能在268产品中获益，把琐事<br>留给我们，腾出身心，构思你的下个宏伟计划</p>
+                            </div>
+                            <span class="tit-icon-right ml30"></span>
+                        </div>
+                        <div class="section-ele-box">
+                            <ul>
+                                <li v-for="(item, index) in eleBoxList">
+                                    <div class="div-border">
+                                        <img class="ele-img" :src="item.image" alt="">
+                                        <h2 class="mt15">{{item.title}}</h2>
+                                        <span class="mt10"></span>
+                                        <p class="mt15 fsize16 c-999 ele-text">{{item.text}}</p>
+                                        <div class="list-sec">
+                                            <div class="list-sec-li" v-for="(labelitem, index) in item.list">
+                                                <i></i>
+                                                <div>
+                                                    <h4 class="fsize18 c-666">{{labelitem.listtitle}}</h4>
+                                                    <p class="fsize16 mt5 c-999">{{labelitem.listtext}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-btn-box">
+                            <div @click="openKfPopup" class="section-btn-txt fsize16 c-fff sec-btn-one">点击咨询合作详情</div>
+                            <div @click="openPopup" class="section-btn-txt fsize16 c-fff sec-btn-two">免费试用网校产品</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 底部 -->
+            <div id="case" class="footer pagezoom"></div>
+            <!--试用注册-->
+            <div :class="popupSec ? 'bg-shadow-show' : 'bg-shadow'">
+                <div :class="popupSec ? 'tryoutBox-show' : 'tryoutBox'">
+                    <a href="javascript:;" class="close-try" id="close-try" @click="closePopup"></a>
+                    <div class="left-text">
+                        <h2>注册成功您可以获得</h2>
+                        <p>1、网校全功能产品试用账号  </p>
+                        <p>2、金牌IT顾问1对1专属服务</p>
+                        <p>3、量身定制在线教育解决方案</p>
+                    </div>
+                    <div class="applyForm-box">
+                        <span class="tryLogo">在线开通 免费体验</span>
+                        <p>注册成功即可线上体验产品，创建专属网校，售卖录播课程 在线直播授课</p>
+                        <form name="applyForm" method="post" enctype="multipart/form-data">
+                            <section class="trial-ab-form">
+                                <ul>
+                                    <li>
+                                        <label>
+                                            <input class="userName" v-model="popusername" placeholder="请输入您的称呼" type="text" >
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input class="mobile" v-model="popusertel" type="tel" placeholder="请输入您的手机号（必填）" maxlength="11" type="text">
+                                        </label>
+                                    </li>
+                                </ul>
+                                <p>(您的信息仅用于268网校注册试用，将严格保密)</p>
+                                <div class="trialBtn">
+                                    <input type="button" id="subBtn" class="suBtn" value="开通免费试用账号"  @click="submitForm(2)">
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script type="text/babel" src="./js/public/browser.min.js"></script>
+        <script type="text/babel" src="./js/public/polyfill.min.js"></script>
+        <script src="./js/public/jquery-1.11.3.min.js"></script>
+        <script type="" src="./js/public/swiper-bundle.min.js"></script>
+        <script src="./js/index.js"></script>
+
+        <script>
+            //百度咨询代码
+            (function() {
+                var _53code = document.createElement("script");
+                _53code.src = "https://tb.53kf.com/code/code/e49613946bf78d7197f3af52fac2e1986/3";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(_53code, s);
+            })();
+
+            //百度统计代码
+            var _hmt = _hmt || [];
+                (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?82e4e7ee710352006706ff97d0af3fa6";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+
+            $(".footer").load('footer.html');
+        </script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,53 @@
+/** 顶部菜单 */
+.page-menu .w1200 .menubox-children{width: 685px;height:60px;position: absolute;bottom: -40px;left: -594px;z-index:1;display: block;opacity: 0;transition: 0.3s linear;}
+.page-menu .w1200 .menubox-parent .parent-li .parent-bg{width: 687px;height:70px;position: absolute;top:0;left:-595px;background: #fff;z-index: 110;}
+
+/** 公共标题 */
+.section-tit-box{width: 100%;display: flex;justify-content: center;}
+.section-tit-box .tit-sec-box h2{font-size: 36px;line-height: 45px;font-weight: bold;text-align: center;}
+.section-tit-box .tit-sec-box span{width: 60px;height: 6px;background: #2F73F8;border-radius: 3px;display: block;margin:0 auto;}
+.section-tit-box .tit-sec-box p{text-align: center;line-height:22px;font-size: 24px;}
+
+/** banner模块*/
+.netC-banner{background:url("/images/images-prod/banner-img.png") center center no-repeat;height: 710px;position: relative;/*overflow: hidden;*/color: #fff;background-size: cover;}
+.netC-banner .w1200{height: 100%;}  
+.banner-txt{padding: 113px 0 0 0px; overflow: hidden; display: flex;justify-content: space-between;}
+.banner-txt-left {padding-top: 95px;}
+.banner-txt-left .n_server-txt{font-size: 48px; line-height: 52px;}
+.banner-txt-left h3.n_server-title { margin-top: 50px; letter-spacing: 3px;line-height: 30px;color:#E2D5FF;}
+.banner-txt-left .join-btn{width: 260px;height: 54px;text-align: center;line-height: 54px;background: #0023AA;border-radius: 6px;cursor: pointer;}
+.banner-txt-left p { color: #fff; font-size: 18px; line-height: 24px; margin: 35px 0 0;}
+.banner-txt-left .n_server-form .n_server-form-btn{width: 180px;height: 54px; font-size: 18px;color:#2D61FF;background: #fff;display: flex;align-items: center;justify-content: center;cursor: pointer;}
+
+.banner-txt-right {width: 460px;height: 500px;display: flex;flex-direction: column;align-items: center;background: #fff;}
+.banner-txt-right .form-title{font-size: 36px;padding-top: 60px;font-weight: bold;}
+.banner-txt-right input{width: 318px;height: 46px;border:1px solid #DADADA;padding: 0 20px;font-size: 16px;border-radius: 6px;}
+.banner-txt-right input::-webkit-input-placeholder,.banner-txt-right textarea::-webkit-input-placeholder{color: #C2BEBE;}
+.banner-txt-right input::-moz-placeholder,.banner-txt-right textarea::-moz-placeholder{color: #C2BEBE;}　　
+.banner-txt-right input:-moz-placeholder,.banner-txt-right textarea:-moz-placeholder{color: #C2BEBE;}
+.banner-txt-right input:-ms-input-placeholder,.banner-txt-right textarea:-ms-input-placeholder{color: #C2BEBE;}
+.banner-txt-right textarea{width: 318px;height: 52px;border:1px solid #DADADA;padding: 10px 20px;font-size: 16px;border-radius: 6px;font-family: Arial;resize:none;}
+.banner-txt-right .sec-right-btn{width: 360px;height: 48px;border-radius: 6px;text-align: center;line-height: 48px;background-image: linear-gradient(to right, #6778FD , #4E53FC);cursor: pointer;}
+
+/** 模块一 */
+.one-w100{width: 100%;height: 580px;background: #F6F8FF;}
+.one-w100 .section-one-box ul{width: 100%;display: flex;justify-content: space-between;}
+.section-one-box ul li{width: 240px;height: 256px;border-radius: 6px;display: flex;flex-direction: column;align-items: center;cursor: pointer;}
+.section-one-box ul li:hover{background: #fff;box-shadow: 2px 2px 20px -5px rgba(123, 123, 123, 0.75);}
+.section-one-box ul li h2{padding: 40px 0 0;}
+.section-one-box ul li .label-bg{width: 60px;height: 60px;}
+.section-one-box ul li p{width: 202px;text-align: center;line-height: 24px;}
+
+/** 模块二 */
+.two-w100{width: 100%;height: 640px;background: #fff;}
+.two-w100 .section-two-box ul{width: 86%;padding: 0 7%;display: flex;justify-content: space-around;margin-top: 80px;}
+.section-two-box ul li{width: 80px;position: relative;}
+.section-two-box ul li:nth-child(1)::after,.section-two-box ul li:nth-child(2)::after,.section-two-box ul li:nth-child(3)::after{content:'';width: 142px;height: 0px;border:1px dashed #E2E2E2;position: absolute;right:-142px;top:48%;}
+.section-two-box ul li .label-num{height: 72px;}
+.section-two-box ul li:nth-child(1) .label-num{width: 28px;}
+.section-two-box ul li:nth-child(2) .label-num{width: 50px;}
+.section-two-box ul li:nth-child(3) .label-num{width: 53px;}
+.section-two-box ul li:nth-child(4) .label-num{width: 57px;}
+.section-two-box ul li .label-bg{width: 60px;height: 60px;margin: -18px auto 12px;display: block;}
+.section-two-box ul li h2{text-align: center;}
+.two-w100 .apply-btn{width: 240px;height: 50px;line-height: 50px;text-align: center;border-radius: 6px;background: #2F73F8;margin: 70px auto 0;cursor: pointer;}
